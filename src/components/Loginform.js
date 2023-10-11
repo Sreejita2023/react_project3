@@ -1,27 +1,13 @@
 import React, { useCallback } from 'react'
 import { AiOutlineEyeInvisible,AiOutlineEye } from "react-icons/ai";
 
-import { useState,useRef,useEffect} from 'react';
+import { useState} from 'react';
 function Loginform() {
     const [values,setValues]=useState({
         email:"",
         password:"",
     })
-//     const [showPassword,setShow]=useState(false)
-//    showPassword=useRef(false)
-  const afterFirstRender = useRef(false);
-  const [visible, setVisible] = useState(false);
-
-  const handleClickShowPassword = () => {
-    afterFirstRender.current=!afterFirstRender.current
-    // setVisible((current) => !current);
-  };
-
-  useEffect(() => {
-    setVisible((prev)=>({
-        prev:!prev
-    }));
-  }, []);
+    const [visible,setVisible]=useState(false)
     console.log(values)
     console.log(visible)
     function changeHandler(event){
@@ -33,7 +19,7 @@ function Loginform() {
     const handleMouseDownPassword=(event)=>{
         event.preventDefault()
     }
-    // const handleClickShowPassword=useCallback(()=>showPassword.current=!showPassword.current,[])
+   
   return (
     <div>
         <form>
@@ -51,11 +37,11 @@ function Loginform() {
              <input type={visible? "text":"password"} name="password" className='bg-transparent outline-none focus:outline-none' placeholder="Enter password" onChange={changeHandler} value={values.password} 
              onMouseDown={handleMouseDownPassword}
             />
-            
-          </div>
-          <button onClick={handleClickShowPassword}>
-                {visible?<AiOutlineEyeInvisible/>:<AiOutlineEye/>}
+            <button onClick={()=>setVisible((prev)=>!prev)}>
+                {visible?(<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
             </button>
+          </div>
+          
         </label>
         </form>
     </div>
