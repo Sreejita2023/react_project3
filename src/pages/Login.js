@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+
 import photo from '../assets/login.png'
 import Template from '../components/Template'
-function Login() {
+function Login(props) {
+  const logged=props.logged
+  const setLogged=props.setLogged
   return (
-    <Template  title="Welcome Back" formtype="login" image={photo}/>
+    <Template  title="Welcome Back" formtype="login" image={photo} logged={logged} setLogged={setLogged} />
   )
 }
 

@@ -2,7 +2,9 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <div>
+      <h1 className=' font-extrabold text-3xl '>Hello Users !! Let's start</h1>
+    </div>
   )
 }
 
