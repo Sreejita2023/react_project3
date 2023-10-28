@@ -1,4 +1,8 @@
 # React Router Project Starter
-#This web app is based on basic sign in and sign up system uses React Hooks and Icons and React Toastify
-<div>Click on the link to see the website</div>
+
+<div>Fully functional website
+Utilized React Hooks, React Icons, and React Toastify to develop the website, in conjunction with Figma for designing the webpages.
+The website includes a home page, as well as additional login and sign-up pages.
+Please click on the link below to view the webpage.
+</div>
 https://basic-website-sreejita.netlify.app/
