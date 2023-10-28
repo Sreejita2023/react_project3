@@ -1,4 +1,4 @@
-# React Router Project Starter
+# StudyNotionProject App
 
 <div>Fully functional website
 Utilized React Hooks, React Icons, and React Toastify to develop the website, in conjunction with Figma for designing the webpages.
